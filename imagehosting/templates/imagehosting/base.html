@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script  src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="{% static 'imagehosting/css/style.css' %}">
+  </head>
+  <body>
+    <div class='header'> <a href="{% url 'all_posts' %}" class='logo'>LOGO </a>
+      <a href="{% url 'image_new' %}" class='right-menu'>new image</a>
+      <a href="{% url 'all_posts' %}" class='right-menu'>all images</a>
+      <ul class='menu-icon'>
+        <li><i class="fa fa-bars"></i></li>
+        <ul class="menu">
+          <li class="long"><a href="{% url 'image_new' %}">new image</a></li>
+          <li class="long"><a href="{% url 'all_posts' %}">all images</a></li>
+        </ul>
+      </ul>
+    </div>
+
+    {% block content %}
+    {% endblock%}
+  </body>
+  <script type="text/javascript" src="{% static 'imagehosting/js/menu.js' %}"></script>
+</html>

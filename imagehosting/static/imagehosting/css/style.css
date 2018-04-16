@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+}
+
+.actions {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
+
+.actions a {
+  color: #888787;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.actions a:hover{
+  text-decoration: underline;
+}
+
+.block {
+  border: 1px solid #e0e0e0;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  width: 400px;
+}
+
+.images {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.header {
+  background: linear-gradient(#f3f3f3, #e0e0e0);
+  color: black;
+  display: block;
+  font-size: 30px;
+  padding: 10px 25px;
+  position: relative;
+}
+
+ul.menu-icon {
+  color: black;
+  display: none;
+  float: right;
+  margin: 0;
+  padding: 7px 0 20px;
+}
+
+.logo {
+  color: #696969;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  width: 50px;
+}
+
+.login-form {
+  padding: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menu {
+  display: none;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  z-index: 2;
+}
+
+.menu a {
+  background: #e0e0e0;
+  display: inline-block;
+  padding: 10px;
+  text-align: right;
+  text-decoration: none;
+  width: 90%;
+}
+
+.menu a:hover, .paginator a:hover {
+  color:#181D2B;
+}
+
+i {
+  float: right;
+}
+
+.right-menu {
+  display: inline;
+  float: right;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  padding: 12px;
+}
+
+a.right-menu {
+  color: #4368AD;
+  padding: 9px;
+  text-decoration: none;
+}
+
+#page-preloader {
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#page-preloader .spinner {
+  background: url('/static/imagehosting/img/status.gif') no-repeat 50% 50%;
+  height: 32px;
+  left: 50%;
+  margin: -16px 0 0 -16px;
+  position: absolute;
+  top: 50%;
+  width: 32px;
+}
+
+.paginator a {
+  color: #4368AD;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  padding: 25px;
+  text-decoration: none;
+  width: 90%;
+}
+
+@media screen and (max-width: 450px) {
+
+  ul.menu-icon {display: block;}
+
+  a.right-menu {display: none;}
+
+  .block {
+    border-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .block img {
+    width: 100%;
+  }
+
+  .post-form {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+  }
+}

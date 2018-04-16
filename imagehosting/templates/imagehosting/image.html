@@ -1,0 +1,12 @@
+{% extends 'imagehosting/base.html' %}
+
+{% block content %}
+<div class="block"><a href="/media/{{post.file}}"><img src="/media/images{{ post.thumb_name }}"></a>
+  <div class="actions">
+    {% if user.is_authenticated %}
+    <a href="{% url 'delete_post' pk=post.pk %}" onclick = "return confirm('Удалить?')">удалить</a>
+    {% endif %}
+    <a href="/media/{{post.file}}" download>{{ post.name }} скачать</a>
+  </div>
+</div>
+{% endblock %}

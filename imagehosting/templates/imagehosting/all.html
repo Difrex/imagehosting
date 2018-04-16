@@ -1,0 +1,23 @@
+{% extends 'imagehosting/base.html' %}
+
+{% load static %}
+
+{% block content%}
+  <div id="page-preloader"><span class="spinner"></span></div>
+  <div class="images">
+  {% for image in all %}
+    <a href="{% url 'image_detail' pk=image.pk %}" ><img src= "/media/images{{image.thumb_name }}"></a>
+  {% endfor %}
+  </div>
+  <div class="paginator">
+  {% if all.has_previous %}
+    <a href="?page={{ all.previous_page_number }}">Previous</a> <nobr>
+  {% endif %}
+  {% if all.has_next %}
+    <a href="?page={{ all.next_page_number }}">      Next</a>
+  {% endif %}
+  </div>
+  <script  src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{% static 'imagehosting/js/script.js' %}"></script>
+
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends 'imagehosting/base.html' %}
+
+{% block content %}
+<div class="block">
+  <form method="POST" class="post-form" enctype="multipart/form-data" action="" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="send" class="save btn btn-default"></button>
+  </form>
+</div>
+{% endblock %}
