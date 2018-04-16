@@ -5,9 +5,7 @@
 {% block content%}
   <div id="page-preloader"><span class="spinner"></span></div>
   <div class="images">
-  {% for image in all %}
-    <a href="{% url 'image_detail' pk=image.pk %}" ><img src= "/media/images{{image.thumb_name }}"></a>
-  {% endfor %}
+  {% for image in all %}<a href="{% url 'image_detail' pk=image.pk %}" ><img src= "/media/images{{image.thumb_name }}"></a>{% endfor %}
   </div>
   <div class="paginator">
   {% if all.has_previous %}
