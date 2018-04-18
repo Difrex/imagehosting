@@ -29,6 +29,7 @@ body {
 }
 
 .images {
+  font-size: 0;
   margin-left: 25px;
   margin-top: 10px;
 }
