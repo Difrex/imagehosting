@@ -13,16 +13,14 @@ class Post(models.Model):
     def __unicode__(self):
         return self.name
 
+    @property
     def orig_name(self):
         x = os.path.split(self.file.name)[-1]
         return x
 
-    orig_name = property(orig_name)
-
+    @property
     def thumb_name(self):
         return '/thumb_' + self.orig_name
-
-    thumb_name = property(thumb_name)
 
     def delete(self, *args, **kwargs):
         # get file data
