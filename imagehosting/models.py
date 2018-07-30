@@ -1,29 +1,28 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-from django.db import models
-from django.utils import timezone
+
 import os
+from django.db import models
 
 
 class Post(models.Model):
     name = models.CharField(max_length=30, blank=True)
-    file = models.FileField(upload_to='images')
+    file = models.ImageField(upload_to='images')
 
     def __unicode__(self):
         return self.name
-
-    def thumb_name(self):
-        x = os.path.split(self.file.name)[-1]
-        return '/thumb_' + x
-
-    thumb_name = property(thumb_name)
 
     def orig_name(self):
         x = os.path.split(self.file.name)[-1]
         return x
 
     orig_name = property(orig_name)
+
+    def thumb_name(self):
+        return '/thumb_' + self.orig_name
+
+    thumb_name = property(thumb_name)
 
     def delete(self, *args, **kwargs):
         # get file data
