@@ -58,3 +58,8 @@ docs/_build/
 # PyBuilder
 target/
 
+# IDE project settings
+.idea/
+
+# Interpreter
+venv/
