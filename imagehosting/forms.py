@@ -6,13 +6,13 @@ from .models import Post
 
 class PostForm(forms.ModelForm):
 
-        class Meta:
-            model = Post
-            fields = ('name', 'file')
+    class Meta:
+        model = Post
+        fields = ('name', 'file')
 
 
 class DeleteForm(forms.ModelForm):
 
-        class Meta:
-            model = Post
-            fields = []
+    class Meta:
+        model = Post
+        fields = []
